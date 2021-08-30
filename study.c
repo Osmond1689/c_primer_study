@@ -26,6 +26,7 @@ void loop_test();
 void if_test();
 void switch_test();
 void io_test();
+void func_test(int i,char c);//声明带参数的函数
 /*
 使用iso646.h 
 可以使用and or not
@@ -76,16 +77,27 @@ void scanf_test(void)
     printf("%zd",sizeof(i_test));//以字节为单位,zd格式化，或u，lu，返回size_t类型 无符合整数
     ch=getchar();//获取输入字符
     putchar(ch);//输出字符，只能处理char
+    //strlen()获取字符串长度
+    //strcat（a,b）拼接字符串
+    //strncat(a,b,n)计算最大添加数量n
+    //strcmp()字符串内容比较
+    //strncmp（）字符串指定长度比较
+    //strcpy（）复制字符串
+    //strncpy()指定最大长度copy
+    //sprintf（）按照print格式化内容存入字符串
 }
 
 void string_test(void)
 {
+    //char类型数组 name={'o','s','m','o','n','d'};
+    //字符串 name=“osmond”;
     const char company[5] = "IVI";//c语言中为只读变量，非常量
     char name1[10];//声明
     char name2[8]="osmond";//初始化,要多一位\0结束符
     printf("%zd",strlen(name2));//计算长度
     printf("%s\n",NAME);
     printf("%s\n",company);
+
 
 }
 
@@ -163,8 +175,20 @@ void io_test()
     printf("结束");
 }
 
+void func_test(int i,char c)
+{
+    printf("%d %c",i,c);
+}
+/*
+函数特性 递归
+*/
 
-// void array_test()//数组，字符数组+\0=字符串
-// {
-    
-// }
+void array_test()//数组，字符数组+\0=字符串
+{
+    int power[8]={1,2,3,4,5,6,7,8}; //初始化要赋初值
+    int arr[6]={[5]=212};//把arr[5]初始化为212,其他为0
+    //c数组不可以相互赋值 
+    //数组名是函数首元素的地址
+}
+
+
