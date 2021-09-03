@@ -6,12 +6,10 @@ int main(void){
     double hotel_rate;
     int code;
 
-    while ((code = menu())) != QUIT){
+    while ((code = menu()) != QUIT){
         switch (code)
         {
         case 1: hotel_rate = HOTEL1;
-        /* constant-expression */:
-            /* code */
                 break;
         case 2: hotel_rate = HOTEL2;
                 break;
